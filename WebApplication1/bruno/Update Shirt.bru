@@ -1,0 +1,22 @@
+meta {
+  name: Update Shirt
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5172/api/shirts/9
+  body: json
+  auth: inherit
+}
+
+body:json {
+    {
+      "shirtId": 9,
+      "brand": "Your Brand",
+      "color": "Yellow",
+      "size": 9,
+      "gender": "Women",
+      "price": 70
+    }
+}

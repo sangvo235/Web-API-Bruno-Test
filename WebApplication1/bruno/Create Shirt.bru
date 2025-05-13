@@ -1,0 +1,29 @@
+meta {
+  name: Create Shirt
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:5172/api/shirts
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "brand": "Your Brand",
+    "color": "Purple",
+    "size": 12,
+    "gender": "Men",
+    "price": 32
+  }
+}
+
+body:form-urlencoded {
+  ShirtId: 2
+  Brand: Uniqlo
+  Color: White
+  Size: 16
+  Price: 20
+}
